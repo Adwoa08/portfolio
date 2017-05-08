@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*hamburger*/
+
+#sidebar-btn {
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    cursor: pointer;
+    margin: 20px 20px 2px 20px;
+    /*    top: 0px;*/
+}
+
+#sidebar-btn span {
+    height: 2px;
+    background: #00A2FF;
+    display: block;
+    margin-top: 4px;
+}
+
+#sidebar-btn span:nth-child(2) {
+    width: 75%;
+}
+
+#sidebar-btn span:nth-child(3) {
+    width: 50%;
+}
+
+nav {
+    width: 100px;
+    height: 80px;
+    position: fixed;
+}
+
+#sections_panel {
+    height: 0px;
+    width: 70px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    overflow: hidden;
+    z-index: 1000px;
+    transition: height 0.5s linear 0s;
+}
+
+nav ul {
+    height: 80px;
+    position: absolute;
+}
+
+nav ul li {
+    /*    height: 10px;*/
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+    border: 1px solid #999;
+    padding: 5px 5px;
+    padding-left: 11px;
+    margin: 1px auto;
+    background: rgba(0, 162, 255, 0.2);
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+
+/*home page/welcome page styleing*/
+
+.home-bg {
+    background-image: url("images/laptop.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    color: #00A2FF;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.hmpg-content {
+    position: relative;
+    top: 200px;
+}
+
+
+
+@media screen and (min-width:400px) {
+    @keyframes hrline {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(10%);
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    @keyframes hrline {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(148%);
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 720px) {
+    @keyframes hrline {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(142%);
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1440px) {
+    @keyframes hrline {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(172%);
+        }
+    }
+
+}
+
+
+hr {
+    max-width: 400px;
+    margin: 5px auto;
+    border: 1px solid #00A2FF;
+    margin-left: -450px;
+    animation-name: hrline;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+#name-on-hmpg {
+    word-spacing: 10px;
+    margin-bottom: 30px;
+}
+
+#stack-on-hmpg {
+    letter-spacing: 3px;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+#hmpg-ul {
+    list-style: none;
+}
+
+.hmpg-li {
+    display: inline-block;
+}
+
+.hmpg-media-icons {
+    font-size: 50px;
+    margin: 15px;
+}
+
+#hmpg-next {
+    position: relative;
+    top: 380px;
+}
+
+h6 a {
+    background: rgba(0, 162, 255, 0.2);
+    display: block;
+    width: 40px;
+}
+
+h6 a:hover {
+    background: skyblue;
+}
+
+.hmpg-next-btn {
+    font-size: 25px;
+    color: white;
+}
+
+#hmpg-next-btn {
+    font-size: 25px;
+}
