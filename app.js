@@ -2,19 +2,22 @@ var app = angular.module("myPortfolio", ["ngRoute"]);
 
 app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider
-        .when("/home", {
+        .when("/welcome", {
+            templateUrl: "components/welcome/welcome.html",
+            controller: "welcomeCtrl"
+        }) .when("/home", {
             templateUrl: "components/home/home.html",
             controller: "homeCtrl"
         })
-        .when("/projects", {
-            templateUrl: "components/projects/projects.html",
-            controller: "projectsCtrl"
+        .when("/about", {
+            templateUrl: "components/about/about.html",
+            controller: "aboutCtrl"
         })
-        .when("/skills", {
-            templateUrl: "components/skills/skills.html",
-            controller: "skillsCtrl"
+        .when("/portfolio", {
+            templateUrl: "components/portfolio/portfolio.html",
+            controller: "portfolioCtrl"
         })
         .otherwise({
-            redirectTo: "/home"
+            redirectTo: "/welcome"
         })
 }]);

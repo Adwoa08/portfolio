@@ -4,165 +4,126 @@
 }
 
 
-/*hamburger*/
 
-#sidebar-btn {
-    width: 25px;
-    height: 15px;
-    position: absolute;
-    cursor: pointer;
-    margin: 20px 20px 2px 20px;
-    /*    top: 0px;*/
+body {
+    font-family: 'Raleway', sans-serif;
 }
 
-#sidebar-btn span {
-    height: 2px;
-    background: #00A2FF;
-    display: block;
-    margin-top: 4px;
+.text-center {
+    text-align: center;
 }
 
-#sidebar-btn span:nth-child(2) {
-    width: 75%;
+.pf-color {
+    color: #A0522D;
 }
 
-#sidebar-btn span:nth-child(3) {
-    width: 50%;
+
+/*Welcome to site*/
+
+.my-pic {
+    height: 520px;
+    margin: auto;
+    margin-top: 10px;
 }
 
-nav {
-    width: 100px;
-    height: 80px;
-    position: fixed;
+.welcome-wrapper {
+    background: #B0C9C3;
+    height: 100vh;
+    width: 100%;
 }
 
-#sections_panel {
-    height: 0px;
-    width: 70px;
-    position: absolute;
-    top: 50px;
-    left: 20px;
-    overflow: hidden;
-    z-index: 1000px;
-    transition: height 0.5s linear 0s;
+
+/*Welcome to site ends here*/
+
+
+/*navbar starts here*/
+.navbar-default .navbar-brand {
+    color: #fff;
 }
 
-nav ul {
-    height: 80px;
-    position: absolute;
+
+.navbar-media-icons {
+    font-size: 40px;
+    margin-top: -12px;
 }
 
-nav ul li {
-    /*    height: 10px;*/
+#header {
+    background: transparent;
 }
 
-nav ul li a {
-    color: white;
-    display: block;
-    border: 1px solid #999;
-    padding: 5px 5px;
-    padding-left: 11px;
-    margin: 1px auto;
-    background: rgba(0, 162, 255, 0.2);
+.navbar-brand {
+    margin-top: 20px;
 }
 
-nav ul li a:hover {
-    text-decoration: none;
+.navbar-collapse {
+    margin-top: 20px;
 }
+
+.navbar-default .navbar-toggle {
+    margin-top: 28px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background: transparent;
+}
+
+.navbar-default .my-links li a {
+    color: #fff;
+}
+
+
+/*navbar ends here*/
 
 
 /*home page/welcome page styleing*/
 
 .home-bg {
-    background-image: url("images/laptop.jpg");
+    background-image: url("images/coolcodebackground.jpg");
     background-size: cover;
     height: 100vh;
     width: 100%;
-    color: #00A2FF;
+    color: white;
     text-align: center;
     font-family: sans-serif;
 }
 
 .hmpg-content {
     position: relative;
-    top: 200px;
+    top: 300px;
 }
 
-
-
-@media screen and (min-width:400px) {
-    @keyframes hrline {
-        from {
-            transform: translateX(0px);
-        }
-        to {
-            transform: translateX(10%);
-        }
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-    @keyframes hrline {
-        from {
-            transform: translateX(0px);
-        }
-        to {
-            transform: translateX(148%);
-        }
-    }
-
-}
-
-
-
-@media screen and (max-width: 720px) {
-    @keyframes hrline {
-        from {
-            transform: translateX(0px);
-        }
-        to {
-            transform: translateX(142%);
-        }
-    }
-
-}
-
-
-@media screen and (max-width: 1440px) {
-    @keyframes hrline {
-        from {
-            transform: translateX(0px);
-        }
-        to {
-            transform: translateX(172%);
-        }
-    }
-
-}
-
-
-hr {
-    max-width: 400px;
-    margin: 5px auto;
-    border: 1px solid #00A2FF;
-    margin-left: -450px;
+#hm-hr {
+    border: 1px solid #ccc;
     animation-name: hrline;
+    animation-duration: 2s;
     animation-timing-function: linear;
-    animation-duration: 1s;
-    animation-delay: 0s;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
+@keyframes hrline {
+    0% {
+        width: 0%;
+    }
+    70% {
+        width: 100%;
+    }
+}
+
 #name-on-hmpg {
-    word-spacing: 10px;
-    margin-bottom: 30px;
+    word-spacing: 5px;
+    font-family: 'Marck Script', cursive;
+    font-size: 50px;
 }
 
 #stack-on-hmpg {
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-size: 35px;
-    margin-bottom: 30px;
+    font-family: 'Forum', cursive;
 }
 
 #hmpg-ul {
@@ -176,6 +137,11 @@ hr {
 .hmpg-media-icons {
     font-size: 50px;
     margin: 15px;
+    color: white;
+}
+
+.hmpg-media-icons:hover {
+    color: white;
 }
 
 #hmpg-next {
@@ -200,4 +166,114 @@ h6 a:hover {
 
 #hmpg-next-btn {
     font-size: 25px;
+}
+
+
+/*portfolio page styling*/
+.pf-inner-content {
+    color: white;
+}
+
+.pf-inner-content img {
+    height: 300px;
+    width: 49%;
+}
+
+
+
+.pf-full {
+    padding: 50px 0;
+    text-align: left;
+    color: #B0C9C3;
+}
+
+.pf-scroll-down {
+    margin-bottom: 30px;
+    color: #A0522D;
+}
+
+.pf-scroll-up {
+    margin-bottom: 30px;
+    color: #A0522D;
+}
+
+.pf-heading {
+    margin: 100px 0 50px 0;
+    color: #A0522D;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 500%;
+}
+
+.portfolio-wrapper {
+    background: #B0C9C3;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.parallex {
+    background-image: url("images/bridge.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+div.vertical-line {
+    width: 1px;
+    /* Line width */
+    background-color: black;
+    /* Line color */
+    height: 100%;
+    /* Override in-line if you want specific height. */
+    float: left;
+    /* Causes the line to float to left of content. 
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */
+}
+
+@media  screen and  (min-width: 768px){}
+
+
+
+/*About page starts here*/
+
+#libraries-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    
+}
+#libraries-div {
+    background: #B0C9C3;
+    height: 30vh;
+    display: flex;
+    align-items: stretch;
+}
+
+.skills {
+    width: 100%;
+}
+
+.about-p {
+    font-size: 18px;
+}
+
+.aboutNav {
+    margin-top: -20px;
+    background-color: #B0C9C3;
+    height: 33vh;
+    box-sizing: border-box;
+}
+
+.aboutMe {
+    position: relative;
+    top: 100px;
+    color: #A0522D;
+    font-size: 72px;
+}
+#about {
+    margin-top: 20px;
 }
