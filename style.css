@@ -3,8 +3,6 @@
     margin: 0;
 }
 
-
-
 body {
     font-family: 'Raleway', sans-serif;
 }
@@ -19,7 +17,6 @@ body {
 
 
 /*Welcome to site*/
-
 .my-pic {
     height: 520px;
     margin: auto;
@@ -32,15 +29,32 @@ body {
     width: 100%;
 }
 
+.enter-site-div a {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 0;
+    padding: 5px 10px;
+    transition: border-radius 0.5s;
+}
+
+.enter-site-div a:hover {
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
 
 /*Welcome to site ends here*/
 
 
+
+
+
 /*navbar starts here*/
+
 .navbar-default .navbar-brand {
     color: #fff;
 }
-
 
 .navbar-media-icons {
     font-size: 40px;
@@ -169,7 +183,11 @@ h6 a:hover {
 }
 
 
+/*home page styling ends here*/
+
+
 /*portfolio page styling*/
+
 .pf-inner-content {
     color: white;
 }
@@ -178,8 +196,6 @@ h6 a:hover {
     height: 300px;
     width: 49%;
 }
-
-
 
 .pf-full {
     padding: 50px 0;
@@ -211,8 +227,6 @@ h6 a:hover {
     width: 100%;
 }
 
-
-
 .parallex {
     background-image: url("images/bridge.jpg");
     background-attachment: fixed;
@@ -221,36 +235,30 @@ h6 a:hover {
     width: 100%;
 }
 
-div.vertical-line {
-    width: 1px;
-    /* Line width */
-    background-color: black;
-    /* Line color */
-    height: 100%;
-    /* Override in-line if you want specific height. */
-    float: left;
-    /* Causes the line to float to left of content. 
-        You can instead use position:absolute or display:inline-block
-        if this fits better with your design */
-}
-
-@media  screen and  (min-width: 768px){}
-
+@media screen and (min-width: 768px) {}
 
 
 /*About page starts here*/
 
+.about-container {
+    background: #B0C9C3;
+    height: 100vh;
+    margin-top: -20px;
+}
+
+.about-text-div {
+    height: 35vh;
+}
+
+.about-text {
+    padding-top: 150px;
+    color: #A0522D;
+    font-size: 72px;
+}
+
 #libraries-icon {
     display: flex;
-    justify-content: center;
-    margin-top: 45px;
-    
-}
-#libraries-div {
-    background: #B0C9C3;
-    height: 30vh;
-    display: flex;
-    align-items: stretch;
+/*    justify-content: center;*/
 }
 
 .skills {
@@ -259,21 +267,32 @@ div.vertical-line {
 
 .about-p {
     font-size: 18px;
+    margin-top: 1px
 }
 
-.aboutNav {
-    margin-top: -20px;
-    background-color: #B0C9C3;
-    height: 33vh;
-    box-sizing: border-box;
-}
-
-.aboutMe {
-    position: relative;
-    top: 100px;
-    color: #A0522D;
-    font-size: 72px;
-}
 #about {
     margin-top: 20px;
+    width: 100%;
+    background: white;
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        height: 100%;
+        background: #B0C9C3;
+    }
+    
+}
+
+
+
+/*footer styling*/
+footer {
+    height: 10vh;
+    margin-top: 20px;
+    color: black;
+}
+.footer-p {
+    text-align: center;
+    margin: auto 0;
 }
