@@ -1,0 +1,179 @@
+//variables
+$headingColor: #08A7A0;
+$whiteColor: #fff;
+$pageColor: #777;
+@mixin myPage($height: 100vh, $width: 100%) {
+    height: $height;
+    width: $width;
+}
+
+.pf-color {
+    color: $headingColor;
+}
+
+//Navbar
+.navbar-media-icons {
+    font-size: 40px;
+    margin-top: -12px;
+     color: $whiteColor;
+}
+
+
+.navbar {
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+.navbar-collapse {
+    margin-top: 20px;
+}
+
+.navbar-default .navbar-toggle {
+    .icon-bar {
+        background-color: $whiteColor;
+    }
+    &:hover {
+        background: transparent;
+    }
+}
+
+
+.navbar-default .my-links li a {
+    color: $whiteColor;
+}
+
+
+
+//homepage
+.home-bg {
+    @include myPage;
+    background-image: url("images/coolcodebackground.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    .hmpg-content {
+        position: relative;
+        top: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-bg {
+        background-position: 100% 0%;
+    }
+}
+
+#hm-hr {
+    border: 1px solid #ccc;
+    animation-name: hrline;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hrline {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/*portfolio page styling*/
+
+.portfolio-wrapper {
+    background: $pageColor;
+    @include myPage(100%,
+    100%);
+}
+
+.parallex {
+    background-image: url("images/bridge.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.pf-inner-content {
+    color: $whiteColor;
+}
+
+.pf-inner-content img {
+    height: 300px;
+    width: 49%;
+}
+
+.pf-full {
+    padding: 50px 0;
+    text-align: left;
+    color: $headingColor;
+}
+
+.pf-scroll-down {
+    margin-bottom: 30px;
+    color: $headingColor;
+}
+
+.pf-scroll-up {
+    margin-bottom: 30px;
+    color: $headingColor;
+}
+
+.pf-heading {
+    margin: 100px 0 50px 0;
+    color: $headingColor;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 500%;
+}
+
+
+
+/*About page starts here*/
+
+.about-container {
+    background: $pageColor;
+    @include myPage(100vh,
+    100%);
+    margin-top: -20px;
+}
+
+.about-text-div {
+    height: 35vh;
+}
+
+.about-text {
+    padding-top: 100px;
+    color: $headingColor;
+    font-size: 72px;
+}
+
+#libraries-icon {
+    display: flex;
+}
+
+.skills {
+    width: 100%;
+}
+
+#about {
+    padding-top: 50px;
+    width: 100%;
+    background: $whiteColor;
+    .about-p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .about-container {
+        @include myPage(100%,
+        100%);
+    }
+}

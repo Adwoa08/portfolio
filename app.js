@@ -2,10 +2,7 @@ var app = angular.module("myPortfolio", ["ngRoute"]);
 
 app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider
-        .when("/welcome", {
-            templateUrl: "components/welcome/welcome.html",
-            controller: "welcomeCtrl"
-        }) .when("/home", {
+        .when("/", {
             templateUrl: "components/home/home.html",
             controller: "homeCtrl"
         })
@@ -18,6 +15,7 @@ app.config(["$routeProvider", function ($routeProvider) {
             controller: "portfolioCtrl"
         })
         .otherwise({
-            redirectTo: "/welcome"
+            redirectTo: "/"
         })
 }]);
+

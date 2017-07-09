@@ -1,0 +1,126 @@
+.pf-color {
+  color: #08A7A0; }
+
+.navbar-media-icons {
+  font-size: 40px;
+  margin-top: -12px;
+  color: #fff; }
+
+.navbar {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none; }
+
+.navbar-collapse {
+  margin-top: 20px; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff; }
+.navbar-default .navbar-toggle:hover {
+  background: transparent; }
+
+.navbar-default .my-links li a {
+  color: #fff; }
+
+.home-bg {
+  height: 100vh;
+  width: 100%;
+  background-image: url("images/coolcodebackground.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-family: sans-serif; }
+  .home-bg .hmpg-content {
+    position: relative;
+    top: 250px; }
+
+@media screen and (max-width: 768px) {
+  .home-bg {
+    background-position: 100% 0%; } }
+#hm-hr {
+  border: 1px solid #ccc;
+  animation-name: hrline;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards; }
+
+@keyframes hrline {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+/*portfolio page styling*/
+.portfolio-wrapper {
+  background: #777;
+  height: 100%;
+  width: 100%; }
+
+.parallex {
+  background-image: url("images/bridge.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%; }
+
+.pf-inner-content {
+  color: #fff; }
+
+.pf-inner-content img {
+  height: 300px;
+  width: 49%; }
+
+.pf-full {
+  padding: 50px 0;
+  text-align: left;
+  color: #08A7A0; }
+
+.pf-scroll-down {
+  margin-bottom: 30px;
+  color: #08A7A0; }
+
+.pf-scroll-up {
+  margin-bottom: 30px;
+  color: #08A7A0; }
+
+.pf-heading {
+  margin: 100px 0 50px 0;
+  color: #08A7A0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 500%; }
+
+/*About page starts here*/
+.about-container {
+  background: #777;
+  height: 100vh;
+  width: 100%;
+  margin-top: -20px; }
+
+.about-text-div {
+  height: 35vh; }
+
+.about-text {
+  padding-top: 100px;
+  color: #08A7A0;
+  font-size: 72px; }
+
+#libraries-icon {
+  display: flex; }
+
+.skills {
+  width: 100%; }
+
+#about {
+  padding-top: 50px;
+  width: 100%;
+  background: #fff; }
+  #about .about-p {
+    font-size: 18px; }
+
+@media screen and (max-width: 720px) {
+  .about-container {
+    height: 100%;
+    width: 100%; } }
+
+/*# sourceMappingURL=styles.css.map */
