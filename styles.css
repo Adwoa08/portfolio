@@ -1,4 +1,4 @@
-.pf-color {
+.section-color {
   color: #08A7A0; }
 
 .navbar-media-icons {
@@ -65,8 +65,15 @@
   width: 100%; }
 
 .pf-inner-content {
-  color: #fff; }
+  color: #fff;
+  padding-bottom: 30px; }
 
+@media screen and (max-width: 768px) {
+  .screenshot .second-img {
+    margin-top: 30px; }
+
+  .screenshot p {
+    display: none; } }
 .pf-inner-content img {
   height: 300px;
   width: 49%; }
@@ -90,6 +97,48 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 500%; }
 
+.screenshot {
+  transition: all 0.3s;
+  opacity: 0.8; }
+  .screenshot img {
+    box-shadow: 0px 0px 9px #333;
+    width: 100%; }
+  .screenshot p {
+    background: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    bottom: -10px;
+    width: 92%;
+    display: none; }
+  .screenshot:hover {
+    opacity: 1;
+    transform: scale(1.12);
+    z-index: 1; }
+  .screenshot:hover p {
+    display: block;
+    animation: a 0.5s; }
+
+@keyframes a {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); } }
+@-webkit-keyframes a {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); } }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .screenshot p {
+    width: 94%; } }
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+  .screenshot p {
+    width: 95%; } }
 /*About page starts here*/
 .about-container {
   background: #777;
