@@ -1,10 +1,9 @@
 $('document').ready(function(){
-   
-    $('#myUl > li[class]').css('borderBottom', '5px solid #EBE54D');
-    
     $('#myUl a').on('click', function () {
-        $('#myUl > li').removeClass('active').css('borderBottom', '');
-        $(this).parent().addClass('active').css('borderBottom', '5px solid #EBE54D');
+        $('#myUl > li').removeClass('active').css("background", " ").css('borderBottom', '50px');
+        
+        $(this).parent().css('borderBottom', '5px solid #EBE54D');
+        $(this).css("color", '#08A7A0');
     }) 
 });
 

@@ -2,8 +2,10 @@
 $headingColor: #08A7A0;
 $whiteColor: #fff;
 $pageColor: #777;
+$hoverColor: #f3d350;
 $profileContentPadding: 30px;
-$ScreenshotDescriptionBackground: black;
+$ScreenshotDescriptionBackground: $pageColor;
+$descriptionColor: $headingColor;
 @mixin myPage($height: 100vh, $width: 100%) {
     height: $height;
     width: $width;
@@ -17,7 +19,10 @@ $ScreenshotDescriptionBackground: black;
 .navbar-media-icons {
     font-size: 40px;
     margin-top: -12px;
-    color: $whiteColor;
+    color: $headingColor;
+    &:hover {
+        color: $hoverColor;
+    }
 }
 
 .navbar {
@@ -33,28 +38,64 @@ $ScreenshotDescriptionBackground: black;
 
 .navbar-default .navbar-toggle {
     .icon-bar {
-        background-color: $whiteColor;
+        background-color: $headingColor;
     }
     &:hover {
-        background: transparent;
+        background: $hoverColor;
     }
 }
 
 .navbar-default .my-links li a {
-    color: $whiteColor;
+    color: $headingColor;
 }
+
+.navbar-default .my-links li:after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0;
+    margin: 0 .5rem -5px 0;
+    -webkit-transition: width .3s ease-out, background-color .3s ease-out;
+    transition: width .3s ease-out, background-color .3s ease-out;
+}
+
+.navbar-default .my-links li a:hover {
+    color: #f3d350;
+}
+
+.navbar-default .my-links li:hover:after {
+    width: 100%;
+    background: #f3d350;
+}
+
+@media screen and (max-width: 768px){
+    .navbar-default .my-links li:after {
+        display: none;
+    }
+}
+
+
 
 //homepage
 .home-bg {
     @include myPage;
-    background-image: url("images/coolcodebackground.jpg");
+    background: -webkit-linear-gradient(top, transparent, $pageColor), url("images/bg1.jpg");
+    background: linear-gradient(180deg, transparent 40%, $pageColor), url("images/bg1.jpg");
+    background-position: center center;
     background-size: cover;
-    color: white;
+    color: $headingColor;
     text-align: center;
     font-family: sans-serif;
     .hmpg-content {
         position: relative;
         top: 250px;
+        #hmpg-name {
+            font-size: 3.5em;
+            text-shadow: 1px 1px 1px rgb(0,0,0);
+        }
+        #hmpg-stack {
+            text-shadow: 2px 2px 0 black;
+        }
     }
 }
 
@@ -65,7 +106,7 @@ $ScreenshotDescriptionBackground: black;
 }
 
 #hm-hr {
-    border: 1px solid #ccc;
+    border: 2px solid #f3d350;
     animation-name: hrline;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -78,9 +119,10 @@ $ScreenshotDescriptionBackground: black;
         width: 0%;
     }
     100% {
-        width: 100%;
+        width: 65%;
     }
 }
+
 
 
 /*portfolio page styling*/
@@ -102,15 +144,6 @@ $ScreenshotDescriptionBackground: black;
 .pf-inner-content {
     color: $whiteColor;
     padding-bottom: $profileContentPadding;
-}
-
-@media screen and (max-width: 768px) {
-    .screenshot .second-img {
-        margin-top: $profileContentPadding;
-    }
-    .screenshot p {
-        display: none;
-    }
 }
 
 .pf-inner-content img {
@@ -149,17 +182,20 @@ $ScreenshotDescriptionBackground: black;
         width: 100%;
     }
     p {
-        background: $ScreenshotDescriptionBackground;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        background: rgba(0,0,0, 0.6);
+        color: $descriptionColor;
+        height: 50px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
         position: absolute;
         bottom: -10px;
         width: 92%;
         display: none;
+        padding: 15px 0 10px 0;
     }
     &:hover {
         opacity: 1;
-        transform: scale(1.12);
+        transform: scale(1.19);
         z-index: 1;
     }
     &:hover p {
@@ -168,6 +204,18 @@ $ScreenshotDescriptionBackground: black;
     }
 }
 
+.pf-app-heading {
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+    a {
+        color: $headingColor;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
 
 @keyframes a {
     0% {
@@ -191,7 +239,14 @@ $ScreenshotDescriptionBackground: black;
     }
 }
 
-
+@media screen and (max-width: 768px) {
+    .screenshot .second-img {
+        margin-top: $profileContentPadding;
+    }
+    .screenshot:hover p {
+        visibility: hidden;
+    }
+}
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .screenshot p {
